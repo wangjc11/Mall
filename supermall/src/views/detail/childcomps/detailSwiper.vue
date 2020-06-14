@@ -1,9 +1,7 @@
 <template>
-  <swiper class="swiperimg">
+  <swiper class="detailswiperimg">
     <swiper-item v-for='(item,key) in banner' :key="key">
-      <a :href="item.link">
-        <img :src="item.image" alt="">
-      </a>
+        <img :src="item" alt="">
     </swiper-item>
   </swiper>
 </template>
@@ -12,10 +10,10 @@
 import {Swiper,SwiperItem} from "@/components/common/swiper/index.js"
 
 export default {
-  name: 'homeSwiper',
+  name: 'detailSwiper',
   props: {
     banner: {
-      type: Array,
+      type:Array,
       default(){
         return []
       }
@@ -28,8 +26,10 @@ export default {
 }
 </script>
 
-<style>
-.swiperimg img{
+<style scoped>
+.detailswiperimg{
   width: 100%;
+  height: 300px;
+  overflow: hidden;
 }
 </style>

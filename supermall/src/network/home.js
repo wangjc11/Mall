@@ -1,4 +1,4 @@
-import { request } from "@/network/request.js"
+import { request, request1 } from "@/network/request.js"
 
 export function getHomeMultitada() {
   return request({
@@ -6,3 +6,12 @@ export function getHomeMultitada() {
   })
 }
 
+export function getGoodsDate(type,page){
+  return request1({
+    url: '/home/data',
+    params: {
+      type,
+      page,
+    }
+  })
+}

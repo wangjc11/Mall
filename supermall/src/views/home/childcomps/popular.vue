@@ -13,5 +13,7 @@ export default {
 </script>
 
 <style>
-
+.popular img{
+  width: 100%;
+}
 </style>
